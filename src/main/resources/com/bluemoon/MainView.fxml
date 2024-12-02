@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.bluemoon.controller.MainController">
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="Quản lý">
+                    <MenuItem text="Hộ gia đình" onAction="#handleHousehold"/>
+                    <MenuItem text="Khoản phí" onAction="#handleFees"/>
+                </Menu>
+                <Menu text="Tra cứu">
+                    <MenuItem text="Thông tin phí" onAction="#handleSearch"/>
+                </Menu>
+                <Menu text="Thống kê">
+                    <MenuItem text="Tổng hợp phí" onAction="#handleStatistics"/>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <TableView fx:id="dataTable">
+            <columns>
+                <TableColumn text="ID" />
+                <TableColumn text="Tên hộ gia đình" />
+                <TableColumn text="Số tiền" />
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
